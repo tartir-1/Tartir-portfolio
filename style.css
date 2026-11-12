@@ -2,53 +2,123 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f172a;
+    background: #0b1120;
     color: white;
-    text-align: center;
-    line-height: 1.6;
-    padding: 40px 20px;
 }
 
-h1 {
-    font-size: 42px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #111827;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav span {
     color: #38bdf8;
-    margin-bottom: 10px;
 }
 
-h2 {
-    color: #f8fafc;
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-h3 {
-    color: #38bdf8;
-    margin-bottom: 10px;
-}
-
-p {
+nav a {
     color: #cbd5e1;
-    max-width: 600px;
-    margin: 10px auto;
-}
-
-a {
-    display: inline-block;
-    color: #0f172a;
-    background-color: #38bdf8;
-    padding: 10px 22px;
-    margin-top: 15px;
-    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 25px;
     transition: 0.3s;
 }
 
-a:hover {
-    background-color: white;
-    transform: translateY(-3px);
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+#home {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 65px;
+    color: #38bdf8;
+    margin: 15px 0;
+}
+
+#home h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #94a3b8;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: #38bdf8;
+    margin-top: 25px;
+}
+
+section a {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0b1120;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+section a:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
 }
