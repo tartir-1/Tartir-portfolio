@@ -1,17 +1,18 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
     });
 });
 
-// Welcome message
-console.log("Welcome to Amr Waleed Portfolio!");
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+console.log("Amr Waleed Portfolio is running!");
